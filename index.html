@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio - Laskar Nur Al Ghifari</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>LASKAR</h1>
+
+        <!-- NAVIGASI -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="#tentang" onclick="tampilkanHalaman('tentang')">
+                        Tentang Saya
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#skill" onclick="tampilkanHalaman('skill')">
+                        Skill
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#kontak" onclick="tampilkanHalaman('kontak')">
+                        Kontak
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- KONTEN UTAMA -->
+    <main>
+
+
+        <!-- HALAMAN 1: TENTANG SAYA -->
+        <section id="tentang">
+
+            <h2>Halo, Saya Laskar!</h2>
+
+            <h3>Future Web Developer</h3>
+
+            <img src="profile.jpg"
+                 alt="Foto Profil Laskar"
+                 width="200">
+
+            <h2>Tentang Saya</h2>
+
+            <p>
+                Halo, saya Laskar Nur Al Ghifari,
+                mahasiswa Sistem Informasi di UIN Syarif
+                Hidayatullah Jakarta. Saya memiliki ketertarikan
+                pada dunia teknologi, khususnya pengembangan
+                website dan aplikasi. Saya mengikuti kegiatan
+                HITLAB Web Development untuk mempelajari
+                pemrograman dari dasar, mengembangkan
+                kemampuan, dan membuat produk digital
+                yang bermanfaat.
+            </p>
+
+            <h3>Temukan Saya</h3>
+
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/laskar-nur-al-ghifari-66510a429/"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/kkarpacil"
+                       target="_blank">
+                        GitHub
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/laskarnur_"
+                       target="_blank">
+                        Instagram
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+
+        <!-- HALAMAN 2: SKILL -->
+        <section id="skill" hidden>
+
+            <h2>Skill Saya</h2>
+
+            <p>
+                Berikut beberapa kemampuan yang sedang
+                saya pelajari dan kembangkan:
+            </p>
+
+            <table border="1">
+
+                <tr>
+                    <th>No</th>
+                    <th>Nama Skill</th>
+                    <th>Tingkat Kemahiran</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>HTML</td>
+                    <td>Basic</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>CSS</td>
+                    <td>Basic</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>C Programming</td>
+                    <td>Basic</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Git & GitHub</td>
+                    <td>Basic</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <!-- HALAMAN 3: KONTAK -->
+        <section id="kontak" hidden>
+
+            <h2>Hubungi Saya</h2>
+
+            <p>
+                Silakan isi formulir berikut untuk
+                menghubungi saya.
+            </p>
+
+            <form action="#" method="post">
+
+                <label for="nama">Nama:</label>
+                <br>
+
+                <input type="text"
+                       id="nama"
+                       name="nama"
+                       placeholder="Masukkan nama Anda"
+                       required>
+
+                <br><br>
+
+                <label for="email">Email:</label>
+                <br>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Masukkan email Anda"
+                       required>
+
+                <br><br>
+
+                <label for="pesan">Pesan:</label>
+                <br>
+
+                <textarea id="pesan"
+                          name="pesan"
+                          rows="5"
+                          cols="30"
+                          placeholder="Tuliskan pesan Anda"
+                          required></textarea>
+
+                <br><br>
+
+                <button type="submit">
+                    Kirim Pesan
+                </button>
+
+            </form>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            &copy; 2026 Laskar Nur Al Ghifari.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT UNTUK NAVIGASI -->
+    <script>
+
+        function tampilkanHalaman(halaman) {
+
+            // Daftar seluruh halaman
+            const daftarHalaman = [
+                "tentang",
+                "skill",
+                "kontak"
+            ];
+
+            // Menyembunyikan seluruh halaman
+            daftarHalaman.forEach(function(id) {
+
+                document.getElementById(id).hidden = true;
+
+            });
+
+            // Menampilkan halaman yang dipilih
+            document.getElementById(halaman).hidden = false;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
